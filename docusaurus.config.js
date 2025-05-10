@@ -61,8 +61,16 @@ const config = {
     ],
   ],
 
-  themes: [["docusaurus-theme-openapi-docs", {}]],
-  
+ 
+  themes: [
+    "@docusaurus/theme-mermaid",  // ✅ Added Mermaid support
+    ["docusaurus-theme-openapi-docs", {}],
+  ],
+
+  markdown: {
+    mermaid: true,  // ✅ Enables Mermaid in Markdown files
+  },
+
   themeConfig: {
     algolia: {
       appId: process.env['ALOGLIA_APP_ID'] || 'DUMMY_APP_ID', // cspell: disable-line
@@ -108,12 +116,12 @@ const config = {
         //   position: "left",
         //   label: "Mechanix OS",
         // },
-        {
-          type: "docSidebar",
-          sidebarId: "mechaCloudSidebar",
-          position: "left",
-          label: "Mecha Cloud",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "mechaCloudSidebar",
+        //   position: "left",
+        //   label: "Mecha Cloud",
+        // },
         {
           type: "docSidebar",
           sidebarId: "mctkSidebar",

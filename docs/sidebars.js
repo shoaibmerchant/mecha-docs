@@ -1,4 +1,4 @@
-import mechaApiRefSidebar from "./apis/references/sidebar"
+import mechaApiRefSidebar from "./apis/references/sidebar";
 const sidebars = {
   mctkSidebar: [
     "mctk/intro",
@@ -6,10 +6,7 @@ const sidebars = {
     {
       type: "category",
       label: "Getting Started",
-      items: [
-        "mctk/gettingstarted/setup",
-        "mctk/gettingstarted/first-app",
-      ],
+      items: ["mctk/gettingstarted/setup", "mctk/gettingstarted/first-app"],
     },
     // "mctk/concepts",
   ],
@@ -53,25 +50,31 @@ const sidebars = {
           items: [
             "comet/development/python/install",
             "comet/development/python/setting-up-pyenv",
-          ]
+          ],
         },
         "comet/development/ruby/install",
-        "comet/development/rust/install",            
-      ]
-    },
-    {
-      type: "category",
-      collapsed: false,
-      label: "Machine Learning",
-      items: [
-        "comet/machine-learning/intro",
-        "comet/machine-learning/running-tensorflow",
-        "comet/machine-learning/installing-coral",
-        "comet/machine-learning/on-device-llm",
+        "comet/development/rust/install",
       ],
     },
     {
       type: "category",
+      collapsed: false,
+      label: "Working with IO",
+      items: ["comet/working-with-io/pin-diagram"],
+    },
+    // {
+    //   type: "category",
+      //   collapsed: false,
+      //   label: "Machine Learning",
+      //   items: [
+      //     "comet/machine-learning/intro",
+      //     "comet/machine-learning/running-tensorflow",
+      //     "comet/machine-learning/installing-coral",
+      //     "comet/machine-learning/on-device-llm",
+      //   ],
+      // },
+      {
+        type: "category",
       collapsed: false,
       label: "Networking",
       items: [
@@ -84,9 +87,82 @@ const sidebars = {
       collapsed: false,
       label: "Emulation",
       items: [
-        "comet/emulation/windows",
-        "comet/emulation/linux",
         "comet/emulation/dosbox",
+        "comet/emulation/windows",
+        "comet/emulation/android",
+      ],
+    },
+    {
+      type: "category",
+      collapsed: false,
+      label: "Extensions",
+      items: [
+        "comet/extensions/io-breakout",
+        "comet/extensions/gamepad",
+      ],
+    },
+    {
+      type: "category",
+      collapsed: false,
+      label: "Resources",
+      items: [
+        "comet/resources/datasheets",
+        {
+          type: "category",
+          collapsed: true,
+          label: "Mechanical Files",
+          items: [
+            "comet/resources/mechanical-files/mecha-comet",
+            "comet/resources/mechanical-files/comet-extensions"
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Benchmarks",
+      items: [
+        "benchmarks/mecha-comet-benchmark",
+      ],
+    },
+    {
+      type: "category",
+      label: "Advanced",
+      items: [
+        {
+          type: "category",
+          label: "Serial Console",
+          items: ["comet/advanced/serial-console/using-debug-uart-cable"],
+        },
+        {
+          type: "category",
+          label: "Bootloader",
+          items: [
+            "comet/advanced/bootloader/introduction-to-bootloader",
+            "comet/advanced/bootloader/uboot-ums",
+            "comet/advanced/bootloader/uboot-variable",
+            "comet/advanced/bootloader/working-with-usb",
+            "comet/advanced/bootloader/changing-boot-logo",
+            "comet/advanced/bootloader/building-uboot-from-source",
+          ],
+        },
+        {
+          type: "category",
+          label: "Linux kernel",
+          items: [
+            "comet/advanced/linux-kernel/building-linux-kernel",
+            "comet/advanced/linux-kernel/customise-device-tree",
+          ],
+        },
+        {
+          type: "category",
+          label: "Buiding Rootfs",
+          items: [
+            "comet/advanced/building-debian-rootfs/using-mecha-make",
+            "comet/advanced/building-debian-rootfs/build-rootfs-manually",
+            "comet/advanced/building-debian-rootfs/flash-rootfs",
+          ],
+        },
       ],
     },
   ],
@@ -104,18 +180,18 @@ const sidebars = {
         "mechanix/using-the-gui/camera",
       ],
     },
-    {
-      type: "category",
-      label: "Functions",
-      items: [
-        "mechanix/functions/wayland",
-        "mechanix/functions/network-manager",
-        "mechanix/functions/bluetooth",
-        "mechanix/functions/video",
-        "mechanix/functions/audio",
-        "mechanix/functions/key-store",
-      ],
-    },
+    // {
+    //   type: "category",
+    //   label: "Functions",
+    //   items: [
+    //     "mechanix/functions/wayland",
+    //     "mechanix/functions/network-manager",
+    //     "mechanix/functions/bluetooth",
+    //     "mechanix/functions/video",
+    //     "mechanix/functions/audio",
+    //     "mechanix/functions/key-store",
+    //   ],
+    // },
     {
       type: "category",
       label: "Installing Apps",
@@ -245,7 +321,7 @@ const sidebars = {
         "apis/how-to-guides/prov-machine",
         "apis/how-to-guides/machine-logs-metrics",
         "apis/how-to-guides/add-virtual-ip",
-        "apis/how-to-guides/generate-grafana-sso"
+        "apis/how-to-guides/generate-grafana-sso",
       ],
     },
 
@@ -254,11 +330,9 @@ const sidebars = {
     //   type: "doc",
     //   id: "apis/references/mecha-cloud-apis",
     // },
-    ... mechaApiRefSidebar,
+    ...mechaApiRefSidebar,
 
-    
     // },
-    
   ],
 };
 
